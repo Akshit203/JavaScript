@@ -103,5 +103,11 @@ const XYZ = "AK"; // Error: Identifier 'XYZ' has already been declared.
   let variables can be updated but not re-declared; const variables can neither be updated nor re-declared.
 - They are all hoisted to the top of their scope. But while var variables are initialized with undefined, 
   let and const variables are not initialized.
-- While var and let can be declared without being initialized, const must be initialized during declaration. */
+- While var and let can be declared without being initialized, const must be initialized during declaration.
+- JavaScript is a dynamically typed language, which means we don't have to specify the data type of a variable explicitly. 
+- The type of a variable can change during runtime.
+
+let variable = 100;   // variable is a number
+variable = "Chandigarh";  // variable is a string */
+
 
