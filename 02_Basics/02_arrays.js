@@ -49,7 +49,6 @@ console.log(x); // [ 'superman', 'ironman', 'thor', 'Mercedes', 'Jaquar', 'Audi'
 const newArray = [1, 2, 3, [1, 2], 4, [1, 2, 3, [4, 5]]]; // deeply nested array
 console.log(newArray.flat(Infinity)); // [ 1, 2, 3, 1, 2, 4, 1, 2, 3, 4, 5 ];
 
-
 // ****************************************************************************************************** */
 
 console.log(Array.isArray("Chandigarh")); // false

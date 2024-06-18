@@ -31,6 +31,7 @@ console.log(newArray.indexOf(5)); // 4
 const x = newArray.join(); // converts an array into a string, with each element separated by a specified separator.
 console.log(x); 1,2,3,4,5
 console.log(typeof x); // string
+
 /* ****************************************************************************************************** */
 
 // slice vs splice :
