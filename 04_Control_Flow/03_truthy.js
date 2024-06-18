@@ -68,5 +68,6 @@ console.log(value1)
 // Ternary Operator : A concise way to write if...else statements for simple conditions.
 // condition ? true : false
 
+
 const xyz = 10
 xyz > 5 ? console.log("True") : console.log("false")
