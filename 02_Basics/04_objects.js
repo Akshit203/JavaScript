@@ -42,7 +42,6 @@ console.log(obj3 === obj1) // true
 const obj3 = {...obj1, ...obj2} // combining obj1 and obj2 using spread operator, this syntax is 
 console.log(obj3)
 
-
 const New_obj = {
     name : "xyz",
     city : "chandigarh",

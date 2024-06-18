@@ -12,10 +12,12 @@ const User = {
     email: "ak2003@gmail.com",
 }
 
+
 console.log(User.name); // Output: ak
 console.log(User["name"]); // This is the preferred way when property names are dynamic or contain spaces
                            // output : ak
 
+                           
 // Accessing properties with spaces or special characters
 // console.log(User.country code) // Error: Unexpected identifier
 // console.log(User."country code") // Error: Unexpected string
