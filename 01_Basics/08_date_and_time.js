@@ -9,6 +9,7 @@ console.log(newDate.getMonth()); // 5, because in js months starts from 0
 console.log(newDate.toLocaleDateString()); 14/6/2024
 console.log(newDate.getFullYear()); // 2024
 
+
 console.log(newDate.getMilliseconds());
 console.log(newDate.getMinutes()); 
 

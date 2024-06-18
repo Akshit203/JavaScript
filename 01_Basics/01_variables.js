@@ -97,6 +97,7 @@ const A = "Chandigarh";
 const XYZ = "A";
 const XYZ = "AK"; // Error: Identifier 'XYZ' has already been declared. 
 
+
 /*
 - var declarations are globally scoped or function scoped while let and const are block scoped.
 - var variables can be updated and re-declared within its scope; 

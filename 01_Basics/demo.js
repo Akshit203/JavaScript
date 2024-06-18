@@ -5,7 +5,6 @@ let y;
 console.log(y);
 
 
-
 // console.log(x);
 // getNumber();
 

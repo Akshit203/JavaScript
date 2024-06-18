@@ -19,6 +19,7 @@ console.log(num.toPrecision(3))
 const hundreds = 1000000;
 console.log(hundreds.toLocaleString()) // 10,00,000
 
+
 /* *************************************************************************************************** */
 
 // MATHS 

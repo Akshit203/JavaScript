@@ -4,7 +4,6 @@ const city = "Chandigarh";
 // Traditional String Concatenation : using + operator
 // console.log("hello my name is "+name, "and my city is "+city ) // Traditional way
 
-
 // Template Literals : Using template literals, introduced in ES6 (ECMAScript 2015), with backticks (`)
 
 /* String interpolation in JavaScript, facilitated by template literals, allows for the embedding 
