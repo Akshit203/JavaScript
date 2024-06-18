@@ -23,6 +23,7 @@ actual appearance in the code.
 console.log(a); // undefined
 var a = 10;
 
+
 /* ************************************************************************************************ */
 
 // let and const Hoisting

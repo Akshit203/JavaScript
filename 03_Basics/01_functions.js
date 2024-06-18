@@ -87,9 +87,9 @@ console.log(calculatePrice2(100, 200, 300, 400, 500)) // [ 300, 400, 500 ]
 -- Single Parameter: The function takes one parameter and ignores any additional arguments.  
 -- Rest Operator (...): The function collects all arguments into an array and can handle any number of arguments. 
 
-*/
 
-// Functions with Objects :
+
+// Functions with Objects : */
 
 const user = {
     username : "Ak",
