@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul class="language">
+        <li> JavaScript </li>
+    </ul>
+    
+</body>
+
+<script>
+
+    
+    /* Use innerHTML when you need to work with HTML content (elements, attributes, etc.).
+       Use innerText when you need to consider visible content as rendered by the browser, respecting CSS.
+       Use textContent when you need to work with plain text, disregarding any HTML tags or CSS styling. */
+
+    // Add New Element
+
+    function addLanguage (name){
+
+        const x = document.querySelector(".language")
+        const li = document.createElement("li")
+
+        li.innerHTML = `${name}`
+        x.appendChild(li)
+    }
+
+    addLanguage("Python") 
+    addLanguage("Java")
+
+    function addLanguage2 (langName){
+
+        const x = document.querySelector(".language")
+        const li = document.createElement("li")
+
+        li.appendChild(document.createTextNode(`${langName}`))
+        x.appendChild(li)
+
+    }
+    addLanguage2("C++")   
+    addLanguage2("Kotlin")
+
+    // Edit 
+
+    const target = document.querySelector("li:nth-child(2)");
+    // console.log(target)
+
+    const newElement = document.createElement("li")
+    newElement.textContent = "Swift"
+
+    target.replaceWith(newElement)
+
+    // Edit 
+
+    // Use replaceWith when you need to replace an element with one or more new nodes or text.
+    // Use outerHTML when you want to replace an element with a string of HTML.
+
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+    // Delete
+
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+
+
+
+</script>
+
+</html>

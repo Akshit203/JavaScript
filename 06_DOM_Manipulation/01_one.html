@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning on Youtube</title>
+</head>
+<body>
+
+    <div class="bg-black">
+
+        <h1 id="title" class="h1-class">
+            DOCUMENT OBJECT MODEL ( DOM )
+            <span style="display: none;"> Chandigarh </span>
+        </h1>
+
+        <h1>Heading 1</h1>
+        <h1>Heading 2</h1>
+        <h1>Heading 3</h1> 
+        <h1>Heading 4</h1>
+
+        <p> Tricity = Chandigarh, Panchkula, Mohali  </p>
+
+    </div>
+
+    <ul>
+        <li class="list-item"> list 1 </li>
+        <li class="list-item"> list 2 </li>
+        <li class="list-item"> list 3 </li>
+        <li class="list-item"> list 4 </li>
+    </ul>
+
+    <script>
+
+        // Accessing elements in the DOM using different selectors
+
+        const bgBlackDiv = document.querySelector('.bg-black');
+        const headings = document.getElementsByTagName('h1');
+        const firstHeading = document.querySelector('h1');
+        const allHeadings = document.querySelectorAll('h1');
+
+        // Get Attribute allows you to retrieve the value of a specific attribute.
+
+        const firstHeadingClass = firstHeading.getAttribute('class');
+        console.log('Class of first heading:', firstHeadingClass); // h1-class
+
+        // Understanding DOM selectors and NodeList in JavaScript
+
+        // NodeList example
+        const headingList = document.querySelectorAll('h1');
+        console.log('NodeList of h1 elements:', headingList);
+
+        // innerHTML vs textContent
+
+        const title = document.getElementById('title');
+        console.log('innerHTML:', title.innerHTML); 
+        /* innerHTML: DOCUMENT OBJECT MODEL ( DOM ) 
+                      <span style="display: none;"> Chandigarh </span> */
+                                                            
+
+        console.log('textContent:', title.textContent); 
+        /* textContent: DOCUMENT OBJECT MODEL ( DOM )
+                        Chandigarh */
+         
+            
+
+        // HTML collection and querying in JavaScript
+        const headingCollection = document.getElementsByTagName('h1');
+        console.log('HTMLCollection of h1 elements:', headingCollection);
+
+        // Using DOM selectors to select elements by ID and class
+        const titleHeading = document.getElementById('title');
+        const bgBlackDivByClass = document.querySelector('.bg-black');
+
+        // How to select and manipulate DOM elements
+
+        const ul = document.querySelector('ul');
+        ul.addEventListener('click', () => {
+            alert('You clicked the list!');
+        });
+
+        // DOM selectors NodeList and HTMLCollection
+
+        // QuerySelector vs QuerySelectorAll
+
+        const singleLi = document.querySelector('li'); // Selects the first list item
+        const allLi = document.querySelectorAll('li'); // Selects all list items
+        console.log('QuerySelector single list item:', singleLi);
+        console.log('QuerySelectorAll list items:', allLi);
+
+        // Converting DOM selectors NodeList and HTMLCollection
+
+        // Convert NodeList to Array
+        const headingArray = Array.from(headingList);
+        console.log('Array from NodeList:', headingArray);
+
+        // Convert HTMLCollection to Array
+        const headingArrayFromCollection = Array.from(headingCollection);
+        console.log('Array from HTMLCollection:', headingArrayFromCollection);
+
+        // Manipulate DOM selectors NodeList and HTMLCollection
+
+        headingList.forEach(heading => {
+            heading.style.color = 'Blue';
+        });
+
+        for (let heading of headingCollection) {
+            heading.style.border = '1px solid black';
+        }
+
+        // converting HTMLcollection to array 
+
+        const tempClassList = document.getElementsByClassName("list-item")
+        console.log(tempClassList) // HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+        const myConvertedArray = Array.from(tempClassList)
+        console.log(myConvertedArray) // (4) [li.list-item, li.list-item, li.list-item, li.list-item]
+
+        myConvertedArray.forEach(function (li){
+            li.style.color = "orange"
+        })
+
+
+    </script>
+</body>
+</html>

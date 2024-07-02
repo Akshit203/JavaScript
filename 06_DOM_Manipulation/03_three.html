@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DOM </title>
+</head>
+
+<body>
+    
+</body>
+
+<script>
+
+    const newElement = document.createElement("div")
+    console.log(newElement)
+    newElement.className = "main"
+    newElement.id = Math.round(Math.random() * 10 + 1)
+
+    newElement.setAttribute("title", "New Element")
+    newElement.style.background = "blue"
+    newElement.style.fontSize = "15px"
+    newElement.style.fontWeight = "700"
+    newElement.style.color = "white"
+
+    newElement.style.padding = "15px"
+
+    // newElement.innerText = " CHANDIGARH, THE CITY BEAUTIFUL "
+    const addText = document.createTextNode("CHANDIGARH, THE CITY BEAUTIFUL")
+    newElement.appendChild(addText)
+
+    document.body.appendChild(newElement)
+
+
+
+
+</script>
+</html>

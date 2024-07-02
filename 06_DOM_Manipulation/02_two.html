@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DOM Manipulation </title>
+</head>
+
+<body>
+
+    <div class="parent">
+
+        <div class="day"> Monday </div>
+        <div class="day"> Tuesday </div>
+        <div class="day"> Wednesday </div>
+        <div class="day"> Thursday </div>
+        <div class="day"> Friday </div>
+
+    </div>
+    
+</body>
+
+<script>
+
+    const parent = document.querySelector(".parent")
+
+    console.log(parent)
+    console.log(parent.children) // HTMLCollection(5) [div.day, div.day, div.day, div.day, div.day]
+    
+    console.log(parent.children[0]) // <div class="day"> Monday </div>
+    console.log(parent.children[4]) // <div class="day"> Friday </div>
+
+    console.log(parent.children[0].innerHTML) //  Monday
+
+    for (let i = 0; i < parent.children.length; i++){
+        console.log(parent.children[i].innerHTML)
+    }
+
+    parent.children[1].style.color = "orange"
+    console.log(parent.firstElementChild.innerHTML) // Monday
+    console.log(parent.lastElementChild.innerHTML)  // Friday
+
+    const dayOne = document.querySelector(".day")
+    console.log(dayOne)
+    console.log(dayOne.parentElement)
+    console.log(dayOne.nextElementSibling)
+
+    console.log("Nodes : ", parent.childNodes)
+
+
+
+
+
+
+
+</script>
+
+
+</html>
