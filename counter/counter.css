@@ -1,0 +1,41 @@
+.counter-border{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+
+#index-counter{
+
+    height: 250px;
+    width: 250px;
+    background-color: rgb(154, 255, 253);
+    border: 1px solid rgb(0, 0, 0);
+    justify-content: center;
+    align-items: center;
+    display: flex;    
+
+}
+
+#btn-inc {
+
+    width: 200px;
+    height: 50px;
+    background: none;
+    margin-bottom: 20px;
+
+
+}
+
+#btn-dec {
+
+    width: 200px;
+    height: 50px;
+    background: none;
+}
+
+
+    

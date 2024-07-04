@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="counter.css" />
+
+    <script>
+      let counter = 0;
+
+      function increment() {
+        if (counter >= 10) {
+          counter = -1;
+        }
+
+        counter++;
+        document.getElementById("index-counter").innerText = counter;
+
+        if (counter % 2 == 0) {
+          document.getElementById("index-counter").style.color = "red";
+          document.querySelector(".counter-border").style = "background: green";
+        } else {
+          document.getElementById("index-counter").style.color = "white";
+          document.querySelector(".counter-border").style = "background: white";
+        }
+      }
+
+      function decrement() {
+        if (counter <= 0) {
+          counter = 1;
+        }
+
+        counter--;
+        document.getElementById("index-counter").innerText = counter;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="counter-border">
+      <h1 id="index-counter">0</h1>
+
+      <button id="btn-inc" onclick="increment()">
+        <h3>INCREMENT</h3>
+      </button>
+
+      <button id="btn-dec" onclick="decrement()">
+        <h3>DECREMENT</h3>
+      </button>
+    </div>
+  </body>
+</html>

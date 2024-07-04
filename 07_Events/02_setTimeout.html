@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 class="main"> Chandigarh </h1>
+    <button class="stop"> stop </button>
+    
+</body>
+
+<script>
+
+    function changeText (){
+        document.querySelector("h1").innerHTML = "Panchkula"
+    }
+    const x = setTimeout(changeText, 2000)
+
+    // document.querySelector("button").addEventListener('click', clearTimeout(x))
+    // addEventListener method always requires a function as its second argument.
+
+    document.querySelector(".stop").addEventListener('click', () => clearTimeout(x))
+
+</script>
+
+
+</html>

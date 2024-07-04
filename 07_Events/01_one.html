@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Events </title>
+</head>
+
+<body>
+
+    <h2> Amazing Images </h2>
+
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="img1" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="img2" src="https://img.freepik.com/premium-photo/landscape-with-mountains-lake_662214-169913.jpg" alt=""></li>
+            <li><img width="200px" id="img3" src="https://img.freepik.com/premium-photo/mountain-landscape-with-river-mountains_662214-127614.jpg" alt="" ></li>
+            <li><img width="200px" id="img4" src="https://img.freepik.com/premium-photo/breathtaking-nature-photos-that-capture-beauty-natural-world_853677-15990.jpg" alt=""></li>
+            <li><a style="color: rgb(5, 6, 7);" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+
+    
+</body>
+
+<script>
+
+    // document.getElementById("img2").onclick = function(){
+    //     alert("Image 2 clicked")
+    // }
+
+    document.getElementById("images").addEventListener('click', function(e){
+        console.log("clicked inside ul ");
+    }, false)
+
+    document.getElementById("img2").addEventListener('click', function(e){
+        console.log("Image 2 clicked ");
+        e.stopPropagation();
+
+    }, false)
+
+    /* 
+       -- Bubbling Phase: Default phase when no third argument is passed or false is passed. 
+          Events are handled starting from the target element and propagate up to the root.
+
+       -- Capturing Phase: Activated by passing true as the third argument in addEventListener. 
+          Events are handled starting from the root down to the target element.
+
+       -- Stopping Propagation: Uncomment event.stopPropagation() in the child click handler to stop the event from propagating further.
+       
+    */
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keycode
+
+    document.getElementById("google").addEventListener('click', function(e){
+        e.preventDefault()
+        console.log("google clicked");
+        e.stopPropagation();
+
+    }, false)
+
+
+    // document.querySelector("#images").addEventListener('click', function(e){
+    //     // console.log(e.target.parentNode) // img
+    //     console.log(e.target.tagName) // Li
+
+
+    //     const rmv = e.target.parentNode
+    //     rmv.remove();
+    //     // rmv.parentNode.removeChild(rmv)
+    // })
+
+/* **************************************************************************************************************************** */
+
+// This listener targets any IMG elements inside the ul. If an IMG is clicked, it logs the id of the target image
+// and removes its parent li from the DOM.
+
+    document.querySelector("#images").addEventListener('click', function(e){
+        // console.log(e.target.parentNode) // img
+        console.log(e.target.tagName) // Li
+
+        if (e.target.tagName === "IMG"){
+            console.log(e.target.id)
+            const rmv = e.target.parentNode
+            rmv.remove();
+        }
+
+        // rmv.parentNode.removeChild(rmv)
+    })
+
+    /* -- Event Propagation: The e.stopPropagation() method is used to stop the event from bubbling up the DOM tree.
+
+       -- Event Targeting: The e.target property is used to get the actual element that triggered the event.
+
+       -- Default Action Prevention: The e.preventDefault() method is used to prevent the default action of an event.
+    */
+
+
+
+
+
+
+</script>
+
+
+</html>
