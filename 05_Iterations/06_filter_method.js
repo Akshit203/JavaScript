@@ -8,6 +8,7 @@
 // console.log(values) 
 
 
+
 /* ************************************************************************************************************
  
 The filter method in JavaScript creates a new array with all elements that pass the test implemented
