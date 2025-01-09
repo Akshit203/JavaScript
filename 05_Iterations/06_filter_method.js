@@ -12,7 +12,15 @@
  
 The filter method in JavaScript creates a new array with all elements that pass the test implemented
 by the provided function. It's a powerful method for extracting elements from an array that meet certain criteria. */
- 
+
+/* 
+-- Returns a new array: filter() does not modify the original array; it returns a new array.
+-- Only works with arrays: filter() is designed to work with arrays in JavaScript. 
+-- It cannot be used directly on objects or other data types.
+-- Callback function: The callback function is applied to each element of the array, and based on the return value (true or false), 
+   the element is either included or excluded from the new array.
+*/
+
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 const NewNums = nums.filter( (n)=> n > 4 )
@@ -46,7 +54,13 @@ nums.forEach( (num) => {
 
 console.log(x); // [ 5, 6, 7, 8, 9, 10 ]
 
+/*
+   The filter() method works with arrays of any type of elements, whether it's an array of integers, strings, objects,
+   or any other data type. 
+   
+   It is specifically designed for arrays, but it can handle various data types within those arrays. */
 
+// Filter method with Array of objects : 
 
 const books = [
     { title: 'Book One', genre: 'Fiction', publish: 1981, edition: 2004 },
@@ -65,6 +79,14 @@ const books = [
 const userBooks = books.filter( (bk) => bk.genre === "History")
 console.log(userBooks)
 
+/* 
+[
+  { title: 'Book Three', genre: 'History', publish: 1999, edition: 2007 },
+  { title: 'Book Seven', genre: 'History', publish: 1986, edition: 1996 }
+]
+*/
+
+
 // Filtering Books by Publish Year and Genre
 
 const userBooks2 = books.filter( (bk) => {
@@ -72,5 +94,11 @@ const userBooks2 = books.filter( (bk) => {
 } )
 
 console.log(userBooks2)
+
+/*
+[
+  { title: 'Book Three', genre: 'History', publish: 1999, edition: 2007 }
+]
+*/
 
 
