@@ -5,6 +5,9 @@
 
 // Many array methods, like map, filter, and forEach, take callback functions as arguments.
 
+// In JavaScript, when you pass a callback function to another function, 
+// you can pass either a function name [or] an anonymous function (a function without a name)
+
 // Callbacks are essential for asynchronous programming in JavaScript, such as when making
 // HTTP requests or reading files.
 
