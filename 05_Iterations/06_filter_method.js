@@ -41,8 +41,14 @@ console.log(NewNums) // [ 5, 6, 7, 8, 9, 10 ]
 const NewNums2 = nums.filter( (n)=> {return n > 4} )
 console.log(NewNums2) // [ 5, 6, 7, 8, 9, 10 ]
 
-// Using forEach to Filter an Array
+// In most cases, curly braces are used when the function body has more than one statement, 
+// but for simple expressions, we can omit the curly braces for cleaner and more concise code.
 
+
+/* *********************************************************************************************************** */
+
+
+// Using forEach to Filter an Array
 
 const x = []
 
@@ -53,6 +59,10 @@ nums.forEach( (num) => {
 } )
 
 console.log(x); // [ 5, 6, 7, 8, 9, 10 ]
+
+
+/* *********************************************************************************************************** */
+
 
 /*
    The filter() method works with arrays of any type of elements, whether it's an array of integers, strings, objects,
@@ -73,6 +83,7 @@ const books = [
     { title: 'Book Eight', genre: 'Science', publish: 2011, edition: 2016 },
     { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
   ];
+
 
 // Filtering Books by Genre "History"
 
@@ -101,4 +112,5 @@ console.log(userBooks2)
 ]
 */
 
+/* *********************************************************************************************************** */
 
