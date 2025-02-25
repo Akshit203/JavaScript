@@ -10,13 +10,13 @@ HEAP MEMORY:
 -- When you assign an object to another variable, both variables reference the same object in the heap.
 
 */
-
+    
 // Example of stack memory usage with primitive types
 
 let first = "chandigarh";  // 'first' is a string primitive, stored in stack
 let second = first;        // 'second' gets a copy of the value of 'first', also in stack
 
-console.log(second);     // Output: chandigarh
+console.log(second);     //  Output: chandigarh
 second = "Panchkula";    // 'second' is reassigned to a new string, stored separately in stack
 
 console.log(first);  // Output: chandigarh

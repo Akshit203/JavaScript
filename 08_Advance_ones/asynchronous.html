@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <-- 
+
+
+    Synchronous Programming 
+
+    You have a web application that displays user profiles. To get the profile data, you need to fetch it
+    from a server. If you use synchronous programming for this task, the entire application will freeze until
+    the data is fetched and processed.
+
+    When a synchronous request is made to fetch user profile data, the entire application is halted until the data
+    is fetched and processed.
+
+    No other operations can be performed during this time, leading to a frozen UI.
+
+
+
+    Asynchronous programming :
+    
+    When an asynchronous request is made, the application continues to run other tasks while waiting for the 
+    server response. The main thread is not blocked, allowing the user to interact with the application.
+
+    The user can continue to interact with the application, such as clicking buttons, scrolling, or entering data,
+    while the profile data is being fetched.
+
+
+    -- Responsiveness: Keeps the UI responsive, allowing users to interact with the app even while waiting
+       for operations to complete.
+
+    -- Efficiency: Allows handling multiple tasks concurrently, improving the overall efficiency of the application.
+
+    -- User Experience: Enhances the user experience by preventing the application from freezing or becoming
+       unresponsive during long operations.
+
+
+    JavaScript offers several mechanisms for asynchronous programming
+ 
+    -- setTimeout: Executes a function after a specified delay.
+    -- setInterval: Repeatedly executes a function with a fixed time delay between each call.
+
+    -- Promises: Represents a value that may be available now, or in the future, or never. 
+       Promises provide a way to handle asynchronous operations more effectively.
+
+    -- fetch: Provides a modern way to make HTTP requests and handle responses. It returns a Promise.
+
+    -- axios: A popular library for making HTTP requests, which returns Promises and has additional
+       features like interceptors.
+
+    -- XMLHttpRequest: An older way to make HTTP requests. It's more complex and less modern than fetch.
+
+
+    Why Asynchronous Programming is Needed
+
+    * Responsiveness :
+
+    Asynchronous programming keeps the UI responsive, allowing users to interact with the application even
+    while waiting for operations to complete. For example, when fetching user data from a server, the UI
+    can remain interactive, displaying a loading indicator until the data arrives.
+    
+    * Efficiency
+
+    Allows handling multiple tasks concurrently, improving the overall efficiency of the application.
+    For instance, an application can fetch data, listen for user input, and perform animations simultaneously
+    without one task blocking the others.
+    
+    * User Experience
+
+    Enhances the user experience by preventing the application from freezing or becoming unresponsive during
+    long operations. Asynchronous programming ensures that long-running tasks, such as network requests or complex
+    calculations, do not block the main thread, keeping the application smooth and responsive.
+        
+
+    -->
+    
+</body>
+
+<script>
+
+    const data = [ {name : "Abc", age : 20}, {name : "Xyz", age : 25} ] // Array of object
+
+    const printData = function (){
+
+        setTimeout(() => {
+
+            let final = "";
+
+            data.forEach((val, index) => {
+                final += `<li>${val.name} </li>`;
+            });
+
+            document.body.innerHTML = final
+        }, 1000)
+ 
+    }
+
+
+    const getData = function (newData, callback){
+
+        setTimeout (()=>{
+            data.push(newData)
+            callback()
+        }, 2000)
+
+    }
+
+    getData({name : "ijk", age : 28}, printData)
+    printData();
+
+
+    /* *************************************************************************************************** 
+    JavaScript Promises :
+
+    A new Promise is created with the Promise constructor, which takes a function with two parameters: resolve and reject.
+
+    The .then() method is used to handle the successful resolution of the Promise
+    The .catch() method is used to handle the rejection of the Promise.
+
+    */
+    const num =  new Promise ((resolve, reject)=>{
+
+        let n = Math.floor(Math.random() * 10)
+        console.log(`Random Number : ${n}`)
+
+        if (n < 5 ){
+            return resolve();
+        }
+        else{
+            return reject();
+        }
+
+    })
+
+    num.then(function(){
+        console.log("Number is less than 5")
+    }).catch(function(){
+        console.log("Error : Number is greater than 5")
+    })
+
+</script>
+
+
+</html>
